@@ -11,12 +11,14 @@ pipeline{
 
         stage('Build'){
             steps{
+                tool name: 'maven-3', type: 'maven'
                 sh 'mvn -B -DskipTests clean package'
             }
 
         }
         stage('Test'){
             steps{
+                tool name: 'maven-3', type: 'maven'
                 sh 'mvn test'
             }
         }

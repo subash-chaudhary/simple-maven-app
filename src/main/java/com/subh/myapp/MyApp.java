@@ -9,7 +9,7 @@ public class MyApp{
     public MyApp() {}
 
     public static void main(String[] args) {
-        System.out.println(new MyApp().getMessage())
+        System.out.println(new MyApp().getMessage());
     }
 
 
