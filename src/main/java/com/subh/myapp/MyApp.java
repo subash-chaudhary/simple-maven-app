@@ -1,4 +1,4 @@
-package com.subh.myapp
+package com.subh.myapp;
 
 public class MyApp{
 
