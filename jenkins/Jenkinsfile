@@ -6,20 +6,21 @@ pipeline{
 
 
     stages{
+        stage('Git Clone'){
+            steps{
+                git 'https://github.com/subash-chaudhary/simple-maven-app'
+            }
+        }
+
         stage('Build'){
             steps{
-
+                sh 'mvn -B -DskipTests clean package'
             }
 
         }
         stage('Test'){
             steps{
-
-            }
-        }
-        stage('Deliver'){
-            steps{
-
+                sh 'mvn test'
             }
         }
     }
