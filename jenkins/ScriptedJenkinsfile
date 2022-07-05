@@ -1,4 +1,4 @@
-def mvnHome = tool name: 'maven-3', type: 'maven'
+def mvnHome = "tool name: 'maven-3', type: 'maven'"
 node{
     stage('Build'){
         sh "${mvnHome}/bin/mvn -B -DskipTests clean package"
